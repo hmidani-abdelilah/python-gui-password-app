@@ -1,0 +1,7 @@
+customtkinter
+#tkinter
+matplotlib
+#csv
+bcrypt
+#re
+tkcalendar
