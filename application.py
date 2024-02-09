@@ -414,16 +414,12 @@ class App:
                   (self.application_name.get(),self.user_application.get(),self.password_application.get(),self.email_application.get(),self.LINK_of_application.get(),self.username))
         db.commit()
         db.close()
-        self.application_name.delete(0, END)
-        self.user_application.delete(0, END)
-        self.password_application.delete(0, END)
-        self.email_application.delete(0, END)
-        self.note_application.delete(0, END)
-        self.location_application.delete(0, END)
-        self.LINK_of_application.delete(0, END)
+        self.cleartree()
         ms.showinfo(title="Add recored",message="Will Done ...!!")
         self.tree.delete(*self.tree.get_children())
         self.fetchall_app()
+        app_Photo = None
+        self.filename = None
     # update recored treeview application
     def update_recordtree(self):
         # Get the selected item
@@ -453,16 +449,13 @@ class App:
         c.execute("UPDATE userapplication SET nameapp = ?, user_app = ?, password = ?, expiredate = datetime('now','74 days'), email_in_app = ?, creationdate = datetime('now'), note = ?, username = ? WHERE nameapp = ?", (self.application_name.get(), self.user_application.get(), self.password_application.get(), self.email_application.get(), self.LINK_of_application.get(), self.username, record[0]))
         db.commit()
         db.close()
-        self.application_name.delete(0, END)
-        self.user_application.delete(0, END)
-        self.password_application.delete(0, END)
-        self.email_application.delete(0, END)
-        self.note_application.delete(0, END)
-        self.location_application.delete(0, END)
-        self.LINK_of_application.delete(0, END)
+        self.cleartree()
         ms.showinfo(title="Update recored",message="Will Done ...!!")
         self.tree.delete(*self.tree.get_children())
         self.fetchall_app()
+        app_Photo = None
+        self.filename = None
+
 
     
     # clear Entry application 
@@ -840,6 +833,7 @@ class App:
                 if self.result_bind[0] != None:
                     self.foo(BytesIO(self.result_bind[0]))
                 else:
+                    #print(self.result_bind[0])
                     # If no image data is found in the database, create an empty image
                     image_width = 150
                     image_height = 150

@@ -1,7 +1,5 @@
 customtkinter
-#tkinter
-matplotlib
-#csv
-bcrypt
-#re
+tk
 tkcalendar
+matplotlib
+bcrypt
