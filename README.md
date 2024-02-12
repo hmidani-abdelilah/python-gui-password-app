@@ -1,4 +1,5 @@
 # python-gui-password-app
+## this application for education purpose
  * Use a Virtual Environment
 ```bash
 python3 -m venv apps
