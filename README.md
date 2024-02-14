@@ -14,7 +14,7 @@ pip install -r requirement.txt
 python3 application.py
 ```
 ## video of application 
-[<img src="https://github.com/hmidani-abdelilah/python-gui-password-app/blob/main/Screenshot%20from%20app.png" width="30%">](https://youtu.be/ydCXS4ZU0Aw "password manager")
+[<img src="https://github.com/hmidani-abdelilah/python-gui-password-app/blob/main/Screenshot%20from%20app.png" >](https://youtu.be/ydCXS4ZU0Aw "password manager")
 
 ```bash
 deactivate
